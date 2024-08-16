@@ -84,7 +84,7 @@ which will be constructed in a similar way, but not be exactly identical.
 
 On Nelle's computer, the filesystem looks like this:
 
-![](fig/filesystem.svg)
+![]({{page.root}}/fig/filesystem.svg)
 
 The filesystem looks like an upside down tree. 
 The topmost directory  is the **root directory**
@@ -118,7 +118,7 @@ Underneath `/Users`,
 we find one directory for each user with an account on Nelle's machine,
 her colleagues *imhotep* and *larry*.
 
-![](fig/home-directories.svg)
+![]({{page.root}}/fig/home-directories.svg)
 
 The user *imhotep*'s files are stored in `/Users/imhotep`,
 user *larry*'s in `/Users/larry`,
@@ -682,7 +682,7 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 > 3. `2012-12-01/ 2013-01-08/ 2013-01-27/`
 > 4. `original/ pnas_final/ pnas_sub/`
 > 
-> ![](fig/filesystem-challenge.svg)
+> ![]({{page.root}}/fig/filesystem-challenge.svg)
 >
 > 
 > > ## Solution
@@ -708,7 +708,7 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 > pnas_sub/ pnas_final/ original/
 > ```
 > 
-> ![](fig/filesystem-challenge.svg)
+> ![]({{page.root}}/fig/filesystem-challenge.svg)
 > 
 > 1. `ls pwd`
 > 2. `ls -r -F`
@@ -737,7 +737,7 @@ which we will dissect into its component parts:
 $ ls -F /
 ```
 
-![](fig/shell_command_syntax.svg)
+![]({{page.root}}/fig/shell_command_syntax.svg)
 
 `ls` is the **command**, with an **option** `-F` and an
 **argument** `/`.

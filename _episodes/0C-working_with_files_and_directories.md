@@ -189,7 +189,7 @@ $ nano draft.txt
 
 Let's type in a few lines of text.
 
-![](fig/nano-screenshot.png)
+![]({{page.root}}/fig/nano-screenshot.png)
 
 Once we're happy with our text, we can press <kbd>Ctrl</kbd>\+<kbd>O</kbd>
 (press the <kbd>Ctrl</kbd> or <kbd>Control</kbd> key and, while
