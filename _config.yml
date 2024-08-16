@@ -154,3 +154,18 @@ exclude:
 
 # Turn on built-in syntax highlighting.
 highlighter: rouge
+
+episode_order:
+  - 0A-intro_to_bash
+  - 0B-bash_navigation
+  - 0C-working_with_files_and_directories
+  - 01-basics
+  - 02-setup
+  - 03-create
+  - 04-changes
+  - 05-history
+  - 06-ignore
+  - 07-github
+  - 08-collab
+  - 09-conflict
+  - 15-supplemental-vscode
