@@ -18,7 +18,7 @@ Let's create a few dummy files:
 
 ~~~
 $ mkdir receipts
-$ touch a.png b.png c.png receipts/a.jpg receipts/b.jpg
+$ touch hat.png sunscreen.png snack.png receipts/a.jpg receipts/b.jpg
 ~~~
 {: .language-bash}
 
@@ -34,9 +34,9 @@ On branch main
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
-	a.png
-	b.png
-	c.png
+	hat.png
+	sunscreen.png
+	snack.png
 	receipts/
 
 nothing added to commit but untracked files present (use "git add" to track)
@@ -108,13 +108,13 @@ nothing to commit, working directory clean
 As a bonus, using `.gitignore` helps us avoid accidentally adding to the repository files that we don't want to track:
 
 ~~~
-$ git add a.png
+$ git add hat.png
 ~~~
 {: .language-bash}
 
 ~~~
 The following paths are ignored by one of your .gitignore files:
-a.png
+hat.png
 Use -f if you really want to add them.
 ~~~
 {: .output}
@@ -134,9 +134,9 @@ On branch main
 Ignored files:
  (use "git add -f <file>..." to include in what will be committed)
 
-        a.png
-        b.png
-        c.png
+        hat.png
+        sunscreen.png
+        snack.png
         receipts/
 
 nothing to commit, working directory clean
