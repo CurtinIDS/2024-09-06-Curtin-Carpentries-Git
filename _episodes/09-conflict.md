@@ -218,7 +218,7 @@ fname=$1
 echo "Working with ${fname}"
 echo "Welcome to Nelle's stats script"
 # Compute the min/max/range of values in a file
-- peel the avocados and put them into a bowl.
+min=$( cat ${file} | sort | head -1)
 ~~~
 {: .output}
 
@@ -312,7 +312,7 @@ fname=$1
 echo "Working with ${fname}"
 echo "Welcome to Nelle's stats script"
 # Compute the min/max/range of values in a file
-- peel the avocados and put them into a bowl.
+min=$( cat ${file} | sort | head -1)
 ~~~
 {: .output}
 
@@ -356,43 +356,43 @@ Conflicts can also be minimized with project management strategies:
 >
 > > ## Solution
 > >
-> > Let's try it. Suppose Nelle takes a picture of its guacamole and
-> > calls it `guacamole.jpg`.
+> > Let's try it. Suppose Nelle takes a picture of a whale and
+> > calls it `whale.jpg`.
 > >
-> > If you do not have an image file of guacamole available, you can create
+> > If you do not have an image file of whale available, you can create
 > > a dummy binary file like this:
 > >
 > > ~~~
-> > $ head --bytes 1024 /dev/urandom > guacamole.jpg
-> > $ ls -lh guacamole.jpg
+> > $ head --bytes 1024 /dev/urandom > whale.jpg
+> > $ ls -lh whale.jpg
 > > ~~~
 > > {: .language-bash}
 > >
 > > ~~~
-> > -rw-r--r-- 1 nelle 57095 1.0K Mar  8 20:24 guacamole.jpg
+> > -rw-r--r-- 1 nelle 57095 1.0K Mar  8 20:24 whale.jpg
 > > ~~~
 > > {: .output}
 > >
 > > `ls` shows us that this created a 1-kilobyte file. It is full of
 > > random bytes read from the special file, `/dev/urandom`.
 > >
-> > Now, suppose Nelle adds `guacamole.jpg` to her repository:
+> > Now, suppose Nelle adds `whale.jpg` to her repository:
 > >
 > > ~~~
-> > $ git add guacamole.jpg
-> > $ git commit -m "Add picture of guacamole"
+> > $ git add whale.jpg
+> > $ git commit -m "Add picture of whale"
 > > ~~~
 > > {: .language-bash}
 > >
 > > ~~~
-> > [main 8e4115c] Add picture of guacamole
+> > [main 8e4115c] Add picture of whale
 > >  1 file changed, 0 insertions(+), 0 deletions(-)
-> >  create mode 100644 guacamole.jpg
+> >  create mode 100644 whale.jpg
 > > ~~~
 > > {: .output}
 > >
 > > Suppose that Jimmy has added a similar picture in the meantime.
-> > Hers is a picture of a guacamole with nachos, but it is *also* called `guacamole.jpg`.
+> > Hers is a picture of a whale with calf, but it is *also* called `whale.jpg`.
 > > When Nelle tries to push, she gets a familiar message:
 > >
 > > ~~~
@@ -431,9 +431,9 @@ Conflicts can also be minimized with project management strategies:
 > > From https://github.com/nelle/north-pacific-gyre.git
 > >  * branch            main     -> FETCH_HEAD
 > >    6a67967..439dc8c  main     -> origin/main
-> > warning: Cannot merge binary files: guacamole.jpg (HEAD vs. 439dc8c08869c342438f6dc4a2b615b05b93c76e)
-> > Auto-merging guacamole.jpg
-> > CONFLICT (add/add): Merge conflict in guacamole.jpg
+> > warning: Cannot merge binary files: whale.jpg (HEAD vs. 439dc8c08869c342438f6dc4a2b615b05b93c76e)
+> > Auto-merging whale.jpg
+> > CONFLICT (add/add): Merge conflict in whale.jpg
 > > Automatic merge failed; fix conflicts and then commit the result.
 > > ~~~
 > > {: .output}
@@ -442,7 +442,7 @@ Conflicts can also be minimized with project management strategies:
 > > there is one key additional line:
 > >
 > > ~~~
-> > warning: Cannot merge binary files: guacamole.jpg (HEAD vs. 439dc8c08869c342438f6dc4a2b615b05b93c76e)
+> > warning: Cannot merge binary files: whale.jpg (HEAD vs. 439dc8c08869c342438f6dc4a2b615b05b93c76e)
 > > ~~~
 > > {: .output}
 > >
@@ -451,19 +451,19 @@ Conflicts can also be minimized with project management strategies:
 > > the version we want to keep. Then we can add and commit this version.
 > >
 > > On the key line above, Git has conveniently given us commit identifiers
-> > for the two versions of `guacamole.jpg`. Our version is `HEAD`, and Jimmy's
+> > for the two versions of `whale.jpg`. Our version is `HEAD`, and Jimmy's
 > > version is `439dc8c0...`. If we want to use our version, we can use
 > > `git checkout`:
 > >
 > > ~~~
-> > $ git checkout HEAD guacamole.jpg
-> > $ git add guacamole.jpg
-> > $ git commit -m "Use image of just guacamole instead of with nachos"
+> > $ git checkout HEAD whale.jpg
+> > $ git add whale.jpg
+> > $ git commit -m "Use image of just whale instead of with calf"
 > > ~~~
 > > {: .language-bash}
 > >
 > > ~~~
-> > [main 21032c3] Use image of just guacamole instead of with nachos
+> > [main 21032c3] Use image of just whale instead of with calf
 > > ~~~
 > > {: .output}
 > >
@@ -471,14 +471,14 @@ Conflicts can also be minimized with project management strategies:
 > > Jimmy's commit identifier, `439dc8c0`:
 > >
 > > ~~~
-> > $ git checkout 439dc8c0 guacamole.jpg
-> > $ git add guacamole.jpg
-> > $ git commit -m "Use image of guacamole with nachos instead of just guacamole"
+> > $ git checkout 439dc8c0 whale.jpg
+> > $ git add whale.jpg
+> > $ git commit -m "Use image of whale with calf instead of just whale"
 > > ~~~
 > > {: .language-bash}
 > >
 > > ~~~
-> > [main da21b34] Use image of guacamole with nachos instead of just guacamole
+> > [main da21b34] Use image of whale with calf instead of just whale
 > > ~~~
 > > {: .output}
 > >
@@ -488,32 +488,32 @@ Conflicts can also be minimized with project management strategies:
 > > image and rename it:
 > >
 > > ~~~
-> > $ git checkout HEAD guacamole.jpg
-> > $ git mv guacamole.jpg guacamole-only.jpg
-> > $ git checkout 439dc8c0 guacamole.jpg
-> > $ mv guacamole.jpg guacamole-nachos.jpg
+> > $ git checkout HEAD whale.jpg
+> > $ git mv whale.jpg whale-only.jpg
+> > $ git checkout 439dc8c0 whale.jpg
+> > $ mv whale.jpg whale-calf.jpg
 > > ~~~
 > > {: .language-bash}
 > >
-> > Then, remove the old `guacamole.jpg` and add the two new files:
+> > Then, remove the old `whale.jpg` and add the two new files:
 > >
 > > ~~~
-> > $ git rm guacamole.jpg
-> > $ git add guacamole-only.jpg
-> > $ git add guacamole-nachos.jpg
-> > $ git commit -m "Use two images: just guacamole and with nachos"
+> > $ git rm whale.jpg
+> > $ git add whale-only.jpg
+> > $ git add whale-calf.jpg
+> > $ git commit -m "Use two images: just whale and with calf"
 > > ~~~
 > > {: .language-bash}
 > >
 > > ~~~
-> > [main 94ae08c] Use two images: just guacamole and with nachos
+> > [main 94ae08c] Use two images: just whale and with calf
 > >  2 files changed, 0 insertions(+), 0 deletions(-)
-> >  create mode 100644 guacamole-nachos.jpg
-> >  rename guacamole.jpg => guacamole-only.jpg (100%)
+> >  create mode 100644 whale-calf.jpg
+> >  rename whale.jpg => whale-only.jpg (100%)
 > > ~~~
 > > {: .output}
 > >
-> > Now both images of guacamole are checked into the repository, and `guacamole.jpg`
+> > Now both images of whale are checked into the repository, and `whale.jpg`
 > > no longer exists.
 > {: .solution}
 {: .challenge}
