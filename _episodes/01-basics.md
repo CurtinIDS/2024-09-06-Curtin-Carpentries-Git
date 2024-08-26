@@ -102,3 +102,14 @@ collaboration among different people.
 > >     problems.
 > {: .solution}
 {: .challenge}
+
+Conceptually version control systems store your information in three places:
+1. A working directory, where you to create and edit files,
+2. A staging area, where you select which *changes* you'd like to save, and
+3. A repository, which stores all of your save points.
+
+![The Git Staging Area](../fig/git-staging-area.svg)
+
+This structure might seem like it's a little too pedantic, however it allows you to edit multiple files and make save-points that are *logically* grouped together.
+For example, you changing the name of a character in your book would involve editing multiple files (chapters?) but is just "one" change logically.
+Similarly, you might change the name of a function in your code, which means updating the name where you define the function, but also in all the places you call that function, again this is "one" change that effects multiple files.
