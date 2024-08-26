@@ -51,7 +51,7 @@ fname=$1
 echo "Working with ${fname}"
 echo "Welcome to Nelle's stats script"
 # Compute the min/max/range of values in a file
-min=$( cat ${file} | sort | head -1)
+min=$( cat ${fname} | sort | head -1)
 ~~~
 {: .output}
 
@@ -103,7 +103,7 @@ fname=$1
 echo "Working with ${fname}"
 echo "Welcome to Nelle's stats script"
 # Compute the min/max/range of values in a file
-max=$( cat ${file} | sort | tail -1)
+max=$( cat ${fname} | sort | tail -1)
 ~~~
 {: .output}
 
@@ -187,9 +187,9 @@ echo "Working with ${fname}"
 echo "Welcome to Nelle's stats script"
 # Compute the min/max/range of values in a file
 <<<<<<< HEAD
-max=$( cat ${file} | sort | tail -1)
+max=$( cat ${fname} | sort | tail -1)
 =======
-min=$( cat ${file} | sort | head -1)
+min=$( cat ${fname} | sort | head -1)
 >>>>>>> dabb4c8c450e8475aee9b14b4383acc99f42af1d
 ~~~
 {: .output}
@@ -218,8 +218,8 @@ fname=$1
 echo "Working with ${fname}"
 echo "Welcome to Nelle's stats script"
 # Compute the min/max/range of values in a file
-min=$( cat ${file} | sort | head -1)
-max=$( cat ${file} | sort | tail -1)
+min=$( cat ${fname} | sort | head -1)
+max=$( cat ${fname} | sort | tail -1)
 ~~~
 {: .output}
 
@@ -313,8 +313,8 @@ fname=$1
 echo "Working with ${fname}"
 echo "Welcome to Nelle's stats script"
 # Compute the min/max/range of values in a file
-min=$( cat ${file} | sort | head -1)
-max=$( cat ${file} | sort | tail -1)
+min=$( cat ${fname} | sort | head -1)
+max=$( cat ${fname} | sort | tail -1)
 ~~~
 {: .output}
 
