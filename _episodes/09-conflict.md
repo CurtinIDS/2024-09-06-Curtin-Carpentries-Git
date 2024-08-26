@@ -308,6 +308,7 @@ consider these technical approaches to reducing them:
 - Make smaller more atomic commits
 - Where logically appropriate, break large files into smaller ones so that it is
   less likely that two authors will alter the same file simultaneously
+- For files where you are writing text, keep one line per sentence and don't hard-wrap lines. This means changing 1 sentence changes only 1 line in your file
 
 Conflicts can also be minimized with project management strategies:
 
@@ -318,15 +319,6 @@ Conflicts can also be minimized with project management strategies:
   project convention that is governing and use code style tools (e.g.
   `htmltidy`, `perltidy`, `rubocop`, etc.) to enforce, if necessary
 
-> ## Solving Conflicts that You Create
->
-> Clone the repository created by your instructor.
-> Add a new file to it,
-> and modify an existing file (your instructor will tell you which one).
-> When asked by your instructor,
-> pull her changes from the repository to create a conflict,
-> then resolve it.
-{: .challenge}
 
 > ## Conflicts on Non-textual files
 >
