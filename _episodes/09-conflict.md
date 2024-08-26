@@ -51,7 +51,7 @@ fname=$1
 echo "Working with ${fname}"
 echo "Welcome to Nelle's stats script"
 # Compute the min/max/range of values in a file
-- put one avocado into a bowl.
+min=$( cat ${file} | sort | head -1)
 ~~~
 {: .output}
 
@@ -59,12 +59,12 @@ and then push the change to GitHub:
 
 ~~~
 $ git add goostats.sh
-$ git commit -m "First step on the instructions"
+$ git commit -m "Calculate first part of stats"
 ~~~
 {: .language-bash}
 
 ~~~
-[main 5ae9631] First step on the instructions
+[main 5ae9631] Calculate first part of stats
  1 file changed, 1 insertion(+)
 ~~~
 {: .output}
@@ -103,7 +103,7 @@ fname=$1
 echo "Working with ${fname}"
 echo "Welcome to Nelle's stats script"
 # Compute the min/max/range of values in a file
-- peel the avocados
+max=$( cat ${file} | sort | tail -1)
 ~~~
 {: .output}
 
@@ -111,12 +111,12 @@ We can commit the change locally:
 
 ~~~
 $ git add goostats.sh
-$ git commit -m "Add first step"
+$ git commit -m "Add first step for stats"
 ~~~
 {: .language-bash}
 
 ~~~
-[main 07ebc69] Add first step
+[main 07ebc69] Add first step for stats
  1 file changed, 1 insertion(+)
 ~~~
 {: .output}
@@ -187,9 +187,9 @@ echo "Working with ${fname}"
 echo "Welcome to Nelle's stats script"
 # Compute the min/max/range of values in a file
 <<<<<<< HEAD
-- peel the avocados
+max=$( cat ${file} | sort | tail -1)
 =======
-- put one avocado into a bowl.
+min=$( cat ${file} | sort | head -1)
 >>>>>>> dabb4c8c450e8475aee9b14b4383acc99f42af1d
 ~~~
 {: .output}
@@ -205,7 +205,7 @@ and reconcile the changes.
 We can do anything we want: keep the change made in the local repository, keep
 the change made in the remote repository, write something new to replace both,
 or get rid of the change entirely.
-Let's replace both so that the file looks like this:
+Let's use both so that the file looks like this:
 
 ~~~
 $ cat goostats.sh
@@ -219,6 +219,7 @@ echo "Working with ${fname}"
 echo "Welcome to Nelle's stats script"
 # Compute the min/max/range of values in a file
 min=$( cat ${file} | sort | head -1)
+max=$( cat ${file} | sort | tail -1)
 ~~~
 {: .output}
 
@@ -313,6 +314,7 @@ echo "Working with ${fname}"
 echo "Welcome to Nelle's stats script"
 # Compute the min/max/range of values in a file
 min=$( cat ${file} | sort | head -1)
+max=$( cat ${file} | sort | tail -1)
 ~~~
 {: .output}
 
