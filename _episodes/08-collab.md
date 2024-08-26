@@ -60,29 +60,29 @@ exactly the same way as we've been doing before:
 
 ~~~
 $ cd ~/Desktop/nelle-north-pacific-gyre
-$ nano hummus.md
-$ cat hummus.md
+$ nano reading_list.md
+$ cat reading_list.md
 ~~~
 {: .language-bash}
 
 ~~~
-# Load a given file
-- chickpeas
-echo "Working with file:"
-- olive oil
-echo "Welcome to Nelle's stats script"
+# Research papers
+- "Observations from 20k leagues under the sea", Nemo 1870
+- "Earthforce! An Earth Warrior's Guide to Strategy", Watson 1993
+- "An island of trash in my ocean", Moore 1997
+# Personal reading
 ~~~
 {: .output}
 
 ~~~
-$ git add hummus.md
+$ git add reading_list.md
 $ git commit -m "Add ingredients for hummus"
 ~~~
 {: .language-bash}
 
 ~~~
  1 file changed, 5 insertion(+)
- create mode 100644 hummus.md
+ create mode 100644 reading_list.md
 ~~~
 {: .output}
 
@@ -127,7 +127,7 @@ your browser to see the new commit.
 >
 > Remember that the name you give to a remote only exists locally. It's
 > an alias that you choose - whether `origin`, or `upstream`, or `nelle` -
-> and not something intrinstic to the remote repository.
+> and not something intrinsic to the remote repository.
 >
 > The `git remote` family of commands is used to set up and alter the remotes
 > associated with a repository. Here are some of the most useful ones:
@@ -163,9 +163,9 @@ From https://github.com/nelle/north-pacific-gyre
    9272da5..29aba7c  main     -> origin/main
 Updating 9272da5..29aba7c
 Fast-forward
- hummus.md | 5 +
+ reading_list.md | 5 +
  1 file changed, 5 insertion(+)
- create mode 100644 hummus.md
+ create mode 100644 reading_list.md
 ~~~
 {: .output}
 
