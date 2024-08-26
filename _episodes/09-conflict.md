@@ -11,6 +11,13 @@ keypoints:
 - "Conflicts occur when two or more people change the same lines of the same file."
 - "The version control system does not allow people to overwrite each other's changes blindly, but highlights conflicts so that they can be resolved."
 ---
+> ## Practicing By Yourself
+> 
+> In some projects you will work with other people and make changes simultaneously that will sometimes conflict with each other.
+> Using git via GitHub means that you see your collaborators changes as "changes on the remote repository".
+> In this lesson you'll play the role of *you* and also *collaborator* by making changes on your local repo and also on the remote (GitHub) repo.
+{: .callout}
+
 
 As soon as people can work in parallel, they'll likely step on each other's
 toes.  This will even happen with a single person: if we are working on
@@ -37,13 +44,8 @@ echo "Welcome to Nelle's stats script"
 ~~~
 {: .output}
 
-Let's add a line to the collaborator's copy only:
-
-~~~
-$ nano goostats.sh
-$ cat goostats.sh
-~~~
-{: .language-bash}
+Let's add a line to the version that is on github.
+Navigate to your repository on github and choose the file `goostats.sh` and then make the following changes with the online editor:
 
 ~~~
 # Load a given file
@@ -55,7 +57,8 @@ min=$( cat ${fname} | sort | head -1)
 ~~~
 {: .output}
 
-and then push the change to GitHub:
+Save these changes with the commit message of "Calculate first part of stats".
+Under the hood, github is doing the following commands for you:
 
 ~~~
 $ git add goostats.sh
@@ -63,33 +66,8 @@ $ git commit -m "Calculate first part of stats"
 ~~~
 {: .language-bash}
 
-~~~
-[main 5ae9631] Calculate first part of stats
- 1 file changed, 1 insertion(+)
-~~~
-{: .output}
 
-~~~
-$ git push origin main
-~~~
-{: .language-bash}
-
-~~~
-Enumerating objects: 5, done.
-Counting objects: 100% (5/5), done.
-Delta compression using up to 8 threads
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 331 bytes | 331.00 KiB/s, done.
-Total 3 (delta 2), reused 0 (delta 0)
-remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
-To https://github.com/nelle/north-pacific-gyre.git
-   29aba7c..dabb4c8  main -> main
-~~~
-{: .output}
-
-Now let's have the owner
-make a different change to their copy
-*without* updating from GitHub:
+Now let's modify the same file in the local repository:
 
 ~~~
 $ nano goostats.sh
