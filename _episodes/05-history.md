@@ -441,30 +441,30 @@ moving backward and forward in time becomes much easier.
 >
 > ~~~
 > $ cd north-pacific-gyre
-> $ echo "I like tomatos, therefore I like ketchup" > ketchup.md
-> $ git add ketchup.md
-> $ echo "ketchup enchances pasta dishes" > ketchup.md
-> $ git commit -m "my opinions about the red sauce"
-> $ git checkout HEAD ketchup.md
-> $ cat ketchup.md # this will print the content of ketchup.md on screen
+> $ echo "Lots of plastic, so much plastic." > observations.md
+> $ git add observations.md
+> $ echo "Life has found a way, and is making a home from some of the plastic." > observations.md
+> $ git commit -m "first day obs in the Garbage patch"
+> $ git checkout HEAD observations.md
+> $ cat observations.md # this will print the content of observations.md on screen
 > ~~~
 > {: .language-bash}
 >
 > 1. ~~~
->    ketchup enchances pasta dishes
+>    Life has found a way, and is making a home from some of the plastic.
 >    ~~~
 >    {: .output}
 > 2. ~~~
->    I like tomatos, therefore I like ketchup
+>    Lots of plastic, so much plastic.
 >    ~~~
 >    {: .output}
 > 3. ~~~
->    I like tomatos, therefore I like ketchup
->    ketchup enchances pasta dishes
+>    Lots of plastic, so much plastic.
+>    Life has found a way, and is making a home from some of the plastic.
 >    ~~~
 >    {: .output}
 > 4. ~~~
->    Error because you have changed ketchup.md without committing the changes
+>    Error because you have changed observations.md without committing the changes
 >    ~~~
 >    {: .output}
 >
@@ -473,20 +473,20 @@ moving backward and forward in time becomes much easier.
 > > The answer is 2. 
 > > 
 > > The changes to the file from the second `echo` command are only applied to the working copy, 
-> > The command `git add ketchup.md` places the current version of `ketchup.md` into the staging area.
+> > The command `git add observations.md` places the current version of `observations.md` into the staging area.
 > > not the version in the staging area.
 > >
-> > So, when `git commit -m "my opinions about the red sauce"` is executed,
-> > the version of `ketchup.md` committed to the repository is the one from the staging area and
+> > So, when `git commit -m "first day obs in the Garbage patch"` is executed,
+> > the version of `observations.md` committed to the repository is the one from the staging area and
 > > has only one line.
 > >  
 > >  At this time, the working copy still has the second line (and 
 > >  
-> >  `git status` will show that the file is modified). However, `git checkout HEAD ketchup.md`
-> >  replaces the working copy with the most recently committed version of `ketchup.md`.
-> >  So, `cat ketchup.md` will output
+> >  `git status` will show that the file is modified). However, `git checkout HEAD observations.md`
+> >  replaces the working copy with the most recently committed version of `observations.md`.
+> >  So, `cat observations.md` will output
 > >  ~~~
-> >  I like tomatos, therefore I like ketchup
+> >  Lots of plastic, so much plastic.
 > > ~~~
 > > {: .output}
 > {: .solution}
