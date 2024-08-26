@@ -12,21 +12,20 @@ keypoints:
 - "Git stores all of its repository data in the `.git` directory."
 ---
 
-Once Git is configured,
-we can start using it.
+Once Git is configured, we can start using it.
 
-We will help Alfredo with his new project, create a repository with all his recipes.
+We will help Nelle with her new project, create a repository with the data for north-pacific-gyre.
 
 First, let's create a directory in `Desktop` folder for our work and then move into that directory:
 
 ~~~
 $ cd ~/Desktop
-$ mkdir recipes
-$ cd recipes
+$ mkdir north-pacific-gyre
+$ cd north-pacific-gyre
 ~~~
 {: .language-bash}
 
-Then we tell Git to make `recipes` a [repository]({{ page.root }}{% link reference.md %}#repository)
+Then we tell Git to make `north-pacific-gyre` a [repository]({{ page.root }}{% link reference.md %}#repository)
 -- a place where Git can store versions of our files:
 
 
@@ -37,9 +36,9 @@ $ git init
 
 It is important to note that `git init` will create a repository that
 includes subdirectories and their files---there is no need to create
-separate repositories nested within the `recipes` repository, whether
+separate repositories nested within the `north-pacific-gyre` repository, whether
 subdirectories are present from the beginning or added later. Also, note
-that the creation of the `recipes` directory and its initialization as a
+that the creation of the `north-pacific-gyre` directory and its initialization as a
 repository are completely separate processes.
 
 If we use `ls` to show the directory's contents,
@@ -51,7 +50,7 @@ $ ls
 {: .language-bash}
 
 But if we add the `-a` flag to show everything,
-we can see that Git has created a hidden directory within `recipes` called `.git`:
+we can see that Git has created a hidden directory within `north-pacific-gyre` called `.git`:
 
 ~~~
 $ ls -a
@@ -104,32 +103,32 @@ wording of the output might be slightly different.
 
 > ## Places to Create Git Repositories
 >
-> Along with tracking information about recipes (the project we have already created),
-> Alfredo would also like to track information about cocktails.
-> Despite Jimmy's concerns, Alfredo creates a `cocktails` project inside his `recipes`
+> Along with tracking information about north-pacific-gyre (the project we have already created),
+> Nelle would also like to track her personal journal.
+> Despite Jimmy's concerns, Nelle creates a `journal` project inside her `north-pacific-gyre`
 > project with the following sequence of commands:
 >
 > ~~~
-> $ cd ~/Desktop    # return to Desktop directory
-> $ cd recipes      # go into recipes directory, which is already a Git repository
-> $ ls -a           # ensure the .git subdirectory is still present in the recipes directory
-> $ mkdir cocktails # make a sub-directory recipes/cocktails
-> $ cd cocktails    # go into cocktails subdirectory
-> $ git init        # make the cocktails subdirectory a Git repository
-> $ ls -a           # ensure the .git subdirectory is present indicating we have created a new Git repository
+> $ cd ~/Desktop            # return to Desktop directory
+> $ cd north-pacific-gyre   # go into north-pacific-gyre directory, which is already a Git repository
+> $ ls -a                   # ensure the .git subdirectory is still present in the north-pacific-gyre directory
+> $ mkdir journal           # make a sub-directory north-pacific-gyre/journal
+> $ cd journal              # go into journal subdirectory
+> $ git init                # make the journal subdirectory a Git repository
+> $ ls -a                   # ensure the .git subdirectory is present indicating we have created a new Git repository
 > ~~~
 > {: .language-bash}
 >
-> Is the `git init` command, run inside the `cocktails` subdirectory, required for
-> tracking files stored in the `cocktails` subdirectory?
+> Is the `git init` command, run inside the `journal` subdirectory, required for
+> tracking files stored in the `journal` subdirectory?
 >
 > > ## Solution
 > >
-> > No. Alfredo does not need to make the `cocktails` subdirectory a Git repository
-> > because the `recipes` repository will track all files, sub-directories, and
-> > subdirectory files under the `recipes` directory.  Thus, in order to track
-> > all information about cocktails, Alfredo only needed to add the `cocktails` subdirectory
-> > to the `recipes` directory.
+> > No. Nelle does not need to make the `journal` subdirectory a Git repository
+> > because the `north-pacific-gyre` repository will track all files, sub-directories, and
+> > subdirectory files under the `north-pacific-gyre` directory.  Thus, in order to track
+> > all information about journal, Nelle only needed to add the `journal` subdirectory
+> > to the `north-pacific-gyre` directory.
 > >
 > > Additionally, Git repositories can interfere with each other if they are "nested":
 > > the outer repository will try to version-control
@@ -150,9 +149,9 @@ wording of the output might be slightly different.
 > {: .solution}
 {: .challenge}
 > ## Correcting `git init` Mistakes
-> Jimmy explains to Alfredo how a nested repository is redundant and may cause confusion
-> down the road. Alfredo would like to remove the nested repository. How can Alfredo undo
-> his last `git init` in the `cocktails` subdirectory?
+> Jimmy explains to Nelle how a nested repository is redundant and may cause confusion
+> down the road. Nelle would like to remove the nested repository. How can Nelle undo
+> her last `git init` in the `journal` subdirectory?
 >
 > > ## Solution -- USE WITH CAUTION!
 > >
@@ -171,11 +170,11 @@ wording of the output might be slightly different.
 > >
 > > ### Solution
 > > Git keeps all of its files in the `.git` directory.
-> > To recover from this little mistake, Alfredo can just remove the `.git`
-> > folder in the cocktails subdirectory by running the following command from inside the `recipes` directory:
+> > To recover from this little mistake, Nelle can just remove the `.git`
+> > folder in the journal subdirectory by running the following command from inside the `north-pacific-gyre` directory:
 > >
 > > ~~~
-> > $ rm -rf cocktails/.git
+> > $ rm -rf journal/.git
 > > ~~~
 > > {: .language-bash}
 > >
