@@ -31,11 +31,11 @@ $ cat goostats.sh
 {: .language-bash}
 
 ~~~
-# Ingredients
-- avocado
-- lime
-- salt
-# Instructions
+# Load a given file
+fname=$1
+echo "Working with ${fname}"
+echo "Welcome to Nelle's stats script"
+# Compute the min/max/range of values in a file
 An ill-considered change
 ~~~
 {: .output}
@@ -53,9 +53,9 @@ index b36abfd..0848c8d 100644
 --- a/goostats.sh
 +++ b/goostats.sh
 @@ -3,3 +3,4 @@
- - lime
- - salt
- # Instructions
+ echo "Working with ${fname}"
+ echo "Welcome to Nelle's stats script"
+ # Compute the min/max/range of values in a file
 +An ill-considered change
 ~~~
 {: .output}
@@ -86,11 +86,11 @@ index df0654a..b36abfd 100644
 --- a/goostats.sh
 +++ b/goostats.sh
 @@ -1,2 +1,5 @@
- # Ingredients
-+- avocado
-+- lime
-+- salt
- # Instructions
+ # Load a given file
++fname=$1
++echo "Working with ${fname}"
++echo "Welcome to Nelle's stats script"
+ # Compute the min/max/range of values in a file
 ~~~
 {: .output}
 
@@ -106,9 +106,9 @@ $ git show HEAD~2 goostats.sh
 ~~~
 commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
 Author: Nelle <nelle@numa.org>
-Date:   Thu Aug 22 10:07:21 2013 -0400
+Date:   Thu Aug 22 10:07:21 2023 -0400
 
-    Create a template for recipe
+    Create a plan for our script
 
 diff --git a/goostats.sh b/goostats.sh
 new file mode 100644
@@ -116,8 +116,8 @@ index 0000000..df0654a
 --- /dev/null
 +++ b/goostats.sh
 @@ -0,0 +1,2 @@
-+# Ingredients
-+# Instructions
++# Load a given file
++# Compute the min/max/range of values in a file
 ~~~
 {: .output}
 
@@ -151,11 +151,11 @@ index df0654a..93a3e13 100644
 --- a/goostats.sh
 +++ b/goostats.sh
 @@ -1,2 +1,5 @@
- # Ingredients
-+- avocado
-+- lime
-+- salt
- # Instructions
+ # Load a given file
++fname=$1
++echo "Working with ${fname}"
++echo "Welcome to Nelle's stats script"
+ # Compute the min/max/range of values in a file
 +An ill-considered change
 ~~~
 {: .output}
@@ -175,11 +175,11 @@ index df0654a..93a3e13 100644
 --- a/goostats.sh
 +++ b/goostats.sh
 @@ -1,2 +1,5 @@
- # Ingredients
-+- avocado
-+- lime
-+- salt
- # Instructions
+ # Load a given file
++fname=$1
++echo "Working with ${fname}"
++echo "Welcome to Nelle's stats script"
+ # Compute the min/max/range of values in a file
 +An ill-considered change
 ~~~
 {: .output}
@@ -220,11 +220,11 @@ $ cat goostats.sh
 {: .language-bash}
 
 ~~~
-# Ingredients
-- avocado
-- lime
-- salt
-# Instructions
+# Load a given file
+fname=$1
+echo "Working with ${fname}"
+echo "Welcome to Nelle's stats script"
+# Compute the min/max/range of values in a file
 ~~~
 {: .output}
 
@@ -247,8 +247,8 @@ $ cat goostats.sh
 {: .language-bash}
 
 ~~~
-# Ingredients
-# Instructions
+# Load a given file
+# Compute the min/max/range of values in a file
 ~~~
 {: .output}
 
@@ -306,7 +306,7 @@ $ git checkout HEAD goostats.sh
 >
 >  git checkout -b <new-branch-name>
 >
-> HEAD is now at f22b25e Create a template for recipe
+> HEAD is now at f22b25e Create a plan for our script
 > ~~~
 > {: .error}
 >

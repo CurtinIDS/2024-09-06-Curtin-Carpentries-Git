@@ -29,11 +29,11 @@ $ cat goostats.sh
 {: .language-bash}
 
 ~~~
-# Ingredients
-- avocado
-- lime
-- salt
-# Instructions
+# Load a given file
+fname=$1
+echo "Working with ${fname}"
+echo "Welcome to Nelle's stats script"
+# Compute the min/max/range of values in a file
 ~~~
 {: .output}
 
@@ -46,11 +46,11 @@ $ cat goostats.sh
 {: .language-bash}
 
 ~~~
-# Ingredients
-- avocado
-- lime
-- salt
-# Instructions
+# Load a given file
+fname=$1
+echo "Working with ${fname}"
+echo "Welcome to Nelle's stats script"
+# Compute the min/max/range of values in a file
 - put one avocado into a bowl.
 ~~~
 {: .output}
@@ -98,11 +98,11 @@ $ cat goostats.sh
 {: .language-bash}
 
 ~~~
-# Ingredients
-- avocado
-- lime
-- salt
-# Instructions
+# Load a given file
+fname=$1
+echo "Working with ${fname}"
+echo "Welcome to Nelle's stats script"
+# Compute the min/max/range of values in a file
 - peel the avocados
 ~~~
 {: .output}
@@ -181,11 +181,11 @@ $ cat goostats.sh
 {: .language-bash}
 
 ~~~
-# Ingredients
-- avocado
-- lime
-- salt
-# Instructions
+# Load a given file
+fname=$1
+echo "Working with ${fname}"
+echo "Welcome to Nelle's stats script"
+# Compute the min/max/range of values in a file
 <<<<<<< HEAD
 - peel the avocados
 =======
@@ -213,11 +213,11 @@ $ cat goostats.sh
 {: .language-bash}
 
 ~~~
-# Ingredients
-- avocado
-- lime
-- salt
-# Instructions
+# Load a given file
+fname=$1
+echo "Working with ${fname}"
+echo "Welcome to Nelle's stats script"
+# Compute the min/max/range of values in a file
 - peel the avocados and put them into a bowl.
 ~~~
 {: .output}
@@ -307,11 +307,11 @@ $ cat goostats.sh
 {: .language-bash}
 
 ~~~
-# Ingredients
-- avocado
-- lime
-- salt
-# Instructions
+# Load a given file
+fname=$1
+echo "Working with ${fname}"
+echo "Welcome to Nelle's stats script"
+# Compute the min/max/range of values in a file
 - peel the avocados and put them into a bowl.
 ~~~
 {: .output}

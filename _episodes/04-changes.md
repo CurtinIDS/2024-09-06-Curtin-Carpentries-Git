@@ -39,8 +39,8 @@ $ nano goostats.sh
 Type the text below into the `goostats.sh` file:
 
 ~~~
-# Ingredients
-# Instructions
+# Load a given file
+# Compute the min/max/range of values in a file
 ~~~
 {: .output}
 
@@ -66,8 +66,8 @@ $ cat goostats.sh
 {: .language-bash}
 
 ~~~
-# Ingredients
-# Instructions
+# Load a given file
+# Compute the min/max/range of values in a file
 ~~~
 {: .output}
 
@@ -128,12 +128,12 @@ To get it to do that,
 we need to run one more command:
 
 ~~~
-$ git commit -m "Create a template for recipe"
+$ git commit -m "Create a plan for our script"
 ~~~
 {: .language-bash}
 
 ~~~
-[main (root-commit) f22b25e] Create a template for recipe
+[main (root-commit) f22b25e] Create a plan for our script
  1 file changed, 1 insertion(+)
  create mode 100644 goostats.sh
 ~~~
@@ -180,9 +180,9 @@ $ git log
 ~~~
 commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
 Author: Nelle <nelle@numa.org>
-Date:   Thu Aug 22 09:51:46 2013 -0400
+Date:   Thu Aug 22 09:51:46 2023 -0400
 
-    Create a template for recipe
+    Create a plan for our script
 ~~~
 {: .output}
 
@@ -215,11 +215,11 @@ $ cat goostats.sh
 {: .language-bash}
 
 ~~~
-# Ingredients
-- avocado
-- lemon
-- salt
-# Instructions
+# Load a given file
+fname=$1
+echo "Working with file:"
+echo "Welcome to Nelle's stats script"
+# Compute the min/max/range of values in a file
 ~~~
 {: .output}
 
@@ -265,11 +265,11 @@ index df0654a..315bf3a 100644
 --- a/goostats.sh
 +++ b/goostats.sh
 @@ -1,2 +1,5 @@
- # Ingredients
-+- avocado
-+- lemon
-+- salt
- # Instructions
+ # Load a given file
++fname=$1
++echo "Working with file:"
++echo "Welcome to Nelle's stats script"
+ # Compute the min/max/range of values in a file
 ~~~
 {: .output}
 
@@ -292,7 +292,7 @@ If we break it down into pieces:
 After reviewing our change, it's time to commit it:
 
 ~~~
-$ git commit -m "Add basic guacamole's ingredients"
+$ git commit -m "Add welcome message and collect filename"
 $ git status
 ~~~
 {: .language-bash}
@@ -315,12 +315,12 @@ Let's fix that:
 
 ~~~
 $ git add goostats.sh
-$ git commit -m "Add basic guacamole's ingredients"
+$ git commit -m "Add welcome message and collect filename"
 ~~~
 {: .language-bash}
 
 ~~~
-[master 34961b1] Add basic guacamole's ingredient
+[master 34961b1] Add welcome message and collect filename
  1 file changed, 3 insertions(+)
 ~~~
 {: .output}
@@ -377,11 +377,11 @@ $ cat goostats.sh
 {: .language-bash}
 
 ~~~
-# Ingredients
-- avocado
-- lime
-- salt
-# Instructions
+# Load a given file
+fname=$1
+echo "Working with ${fname}"
+echo "Welcome to Nelle's stats script"
+# Compute the min/max/range of values in a file
 ~~~
 {: .output}
 
@@ -396,12 +396,12 @@ index 315bf3a..b36abfd 100644
 --- a/goostats.sh
 +++ b/goostats.sh
 @@ -1,5 +1,5 @@
- # Ingredients
- - avocado
--- lemon
-+- lime
- - salt
- # Instructions
+ # Load a given file
+ fname=$1
+-echo "Working with file:"
++echo "Working with ${fname}"
+ echo "Welcome to Nelle's stats script"
+ # Compute the min/max/range of values in a file
 ~~~
 {: .output}
 
@@ -435,12 +435,12 @@ index 315bf3a..b36abfd 100644
 --- a/goostats.sh
 +++ b/goostats.sh
 @@ -1,5 +1,5 @@
- # Ingredients
- - avocado
--- lemon
-+- lime
- - salt
- # Instructions
+ # Load a given file
+ fname=$1
+-echo "Working with file:"
++echo "Working with ${fname}"
+ echo "Welcome to Nelle's stats script"
+ # Compute the min/max/range of values in a file
 ~~~
 {: .output}
 
@@ -450,12 +450,12 @@ and what's in the staging area.
 Let's save our changes:
 
 ~~~
-$ git commit -m "Modify guacamole to the traditional recipe"
+$ git commit -m "Use supplied filename"
 ~~~
 {: .language-bash}
 
 ~~~
-[master 005937f] Modify guacamole to the traditional recipe
+[master 005937f] Use supplied filename
  1 file changed, 1 insertion(+)
 ~~~
 {: .output}
@@ -483,21 +483,21 @@ $ git log
 ~~~
 commit 005937fbe2a98fb83f0ade869025dc2636b4dad5 (HEAD -> main)
 Author: Nelle <nelle@numa.org>
-Date:   Thu Aug 22 10:14:07 2013 -0400
+Date:   Thu Aug 22 10:14:07 2023 -0400
 
-    Modify guacamole to the traditional recipe
+    Use supplied filename
 
 commit 34961b159c27df3b475cfe4415d94a6d1fcd064d
 Author: Nelle <nelle@numa.org>
-Date:   Thu Aug 22 10:07:21 2013 -0400
+Date:   Thu Aug 22 10:07:21 2023 -0400
 
-    Add basic guacamole's ingredients
+    Add welcome message and collect filename
 
 commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
 Author: Nelle <nelle@numa.org>
-Date:   Thu Aug 22 09:51:46 2013 -0400
+Date:   Thu Aug 22 09:51:46 2023 -0400
 
-    Create a template for recipe
+    Create a plan for our script
 ~~~
 {: .output}
 
@@ -539,9 +539,9 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
 > ~~~
 > commit 005937fbe2a98fb83f0ade869025dc2636b4dad5
 > Author: Nelle <nelle@numa.org>
-> Date:   Thu Aug 22 10:14:07 2013 -0400
+> Date:   Thu Aug 22 10:14:07 2023 -0400
 >
->    Modify guacamole to the traditional recipe
+>    Use supplied filename
 > ~~~
 > {: .output}
 >
@@ -553,9 +553,9 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
 > ~~~
 > {: .language-bash}
 > ~~~
-> 005937f (HEAD -> main) Modify guacamole to the traditional recipe
-> 34961b1 Add basic guacamole's ingredients
-> f22b25e Create a template for recipe
+> 005937f (HEAD -> main) Use supplied filename
+> 34961b1 Add welcome message and collect filename
+> f22b25e Create a plan for our script
 > ~~~
 > {: .output}
 >
@@ -570,9 +570,9 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
 > ~~~
 > {: .language-bash}
 > ~~~
-> * 005937f (HEAD -> main) Modify guacamole to the traditional recipe
-> * 34961b1 Add basic guacamole's ingredients
-> * f22b25e Create a template for recipe
+> * 005937f (HEAD -> main) Use supplied filename
+> * 34961b1 Add welcome message and collect filename
+> * f22b25e Create a plan for our script
 > ~~~
 > {: .output}
 {: .callout}
@@ -585,14 +585,14 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
 >    Try it for yourself:
 >
 >    ~~~
->    $ mkdir cakes
+>    $ mkdir references
 >    $ git status
->    $ git add cakes
+>    $ git add references
 >    $ git status
 >    ~~~
 >    {: .language-bash}
 >
->    Note, our newly created empty directory `cakes` does not appear in
+>    Note, our newly created empty directory `references` does not appear in
 >    the list of untracked files even if we explicitly add it (_via_ `git add`) to our
 >    repository. This is the reason why you will sometimes see `.gitkeep` files
 >    in otherwise empty directories. Unlike `.gitignore`, these files are not special
@@ -610,9 +610,9 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
 >    Try it for yourself:
 >
 >    ~~~
->    $ touch cakes/brownie cakes/lemon_drizzle
+>    $ touch references/Nemo_1870 references/Pitt_1983
 >    $ git status
->    $ git add cakes
+>    $ git add references
 >    $ git status
 >    ~~~
 >    {: .language-bash}
@@ -620,7 +620,7 @@ Date:   Thu Aug 22 09:51:46 2013 -0400
 >    Before moving on, we will commit these changes.
 >
 >    ~~~
->    $ git commit -m "Add some initial cakes"
+>    $ git commit -m "Add some initial references"
 >    ~~~
 >    {: .language-bash}
 >
@@ -639,8 +639,8 @@ repository (`git commit`):
 > last commit made to `goostats.sh`?
 >
 > 1. "Changes"
-> 2. "Changed lemon for lime"
-> 3. "Guacamole modified to the traditional recipe"
+> 2. "Changed file for ${fname}"
+> 3. "Use supplied filename"
 >
 > > ## Solution
 > > Answer 1 is not descriptive enough, and the purpose of the commit is unclear;
@@ -689,60 +689,59 @@ repository (`git commit`):
 >
 > 1. Add some text to `goostats.sh` noting the rough price of the
 > ingredients.
-> 2. Create a new file `groceries.md` with a list of products and
-> their prices for different markets.
+> 2. Create a new file `record_all_stats.sh` with a **plan** to loop over all files and run `goostats.sh` on each.
 > 3. Add changes from both files to the staging area,
 > and commit those changes.
 >
 > > ## Solution
 > >
-> > First we make our changes to the `goostats.sh` and `groceries.md` files:
+> > First we make our changes to the `goostats.sh` and `record_all_stats.sh` files:
 > > ~~~
 > > $ nano goostats.sh
 > > $ cat goostats.sh
 > > ~~~
 > > {: .language-bash}
 > > ~~~
-> > # Ingredients
-> > - avocado (1.35)
-> > - lime (0.64)
-> > - salt (2)
+> > # Load a given file
+> > echo "Welcome to Nelle's stats script"
+> > fname=$1
+> > echo "Working with ${fname}"
 > > ~~~
 > > {: .output}
 > > ~~~
-> > $ nano groceries.md
-> > $ cat groceries.md
+> > $ nano record_all_stats.sh
+> > $ cat record_all_stats.sh
 > > ~~~
 > > {: .language-bash}
 > > ~~~
-> > # Market A
-> > - avocado: 1.35 per unit.
-> > - lime: 0.64 per unit
-> > - salt: 2 per kg
+> > # Write a csv header
+> > # Loop over all our data files
+> >   # Run goostats.sh and capture the last line of output
+> >   # Append the name and stats to our csv file.
 > > ~~~
 > > {: .output}
 > > Now you can add both files to the staging area. We can do that in one line:
 > >
 > > ~~~
-> > $ git add goostats.sh groceries.md
+> > $ git add goostats.sh record_all_stats.sh
 > > ~~~
 > > {: .language-bash}
 > > Or with multiple commands:
 > > ~~~
 > > $ git add goostats.sh
-> > $ git add groceries.md
+> > $ git add record_all_stats.sh
 > > ~~~
 > > {: .language-bash}
 > > Now the files are ready to commit. You can check that using `git status`. If you are ready to commit use:
 > > ~~~
-> > $ git commit -m "Write prices for ingredients and their source"
+> > $ git commit -m "Write plan for our looping script"
 > > ~~~
 > > {: .language-bash}
 > > ~~~
 > > [main cc127c2]
-> >  Write prices for ingredients and their source
+> >  Write plan for our looping script
 > >  2 files changed, 7 insertions(+)
-> >  create mode 100644 groceries.md
+> >  create mode 100644 record_all_stats.sh
 > > ~~~
 > > {: .output}
 > {: .solution}

@@ -66,11 +66,11 @@ $ cat hummus.md
 {: .language-bash}
 
 ~~~
-# Ingredients
+# Load a given file
 - chickpeas
-- lemon
+echo "Working with file:"
 - olive oil
-- salt
+echo "Welcome to Nelle's stats script"
 ~~~
 {: .output}
 
