@@ -55,7 +55,7 @@ $ git init
 {: .language-bash}
 
 If you remember back to the earlier [episode](../04-changes/) where we added and
-committed our earlier work on `guacamole.md`, we had a diagram of the local repository
+committed our earlier work on `goostats.sh`, we had a diagram of the local repository
 which looked like this:
 
 ![The Local Repository with Git Staging Area](../fig/git-staging-area.svg)
@@ -64,7 +64,7 @@ Now that we have two repositories, we need a diagram like this:
 
 ![Freshly-Made GitHub Repository](../fig/git-freshly-made-github-repo.png)
 
-Note that our local repository still contains our earlier work on `guacamole.md`, but the
+Note that our local repository still contains our earlier work on `goostats.sh`, but the
 remote repository on GitHub appears empty as it doesn't contain any files yet.
 
 The next step is to connect the two repositories.  We do this by making the

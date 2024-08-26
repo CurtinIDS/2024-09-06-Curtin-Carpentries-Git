@@ -20,13 +20,13 @@ As we saw in the previous episode, we can refer to commits by their
 identifiers.  You can refer to the _most recent commit_ of the working
 directory by using the identifier `HEAD`.
 
-We've been adding small changes at a time to `guacamole.md`, so it's easy to track our
+We've been adding small changes at a time to `goostats.sh`, so it's easy to track our
 progress by looking, so let's do that using our `HEAD`s.  Before we start,
-let's make a change to `guacamole.md`, adding yet another line.
+let's make a change to `goostats.sh`, adding yet another line.
 
 ~~~
-$ nano guacamole.md
-$ cat guacamole.md
+$ nano goostats.sh
+$ cat goostats.sh
 ~~~
 {: .language-bash}
 
@@ -43,15 +43,15 @@ An ill-considered change
 Now, let's see what we get.
 
 ~~~
-$ git diff HEAD guacamole.md
+$ git diff HEAD goostats.sh
 ~~~
 {: .language-bash}
 
 ~~~
-diff --git a/guacamole.md b/guacamole.md
+diff --git a/goostats.sh b/goostats.sh
 index b36abfd..0848c8d 100644
---- a/guacamole.md
-+++ b/guacamole.md
+--- a/goostats.sh
++++ b/goostats.sh
 @@ -3,3 +3,4 @@
  - lime
  - salt
@@ -67,7 +67,7 @@ that by adding `~1`
 to refer to the commit one before `HEAD`.
 
 ~~~
-$ git diff HEAD~1 guacamole.md
+$ git diff HEAD~1 goostats.sh
 ~~~
 {: .language-bash}
 
@@ -76,15 +76,15 @@ again, but with the notation `HEAD~1`, `HEAD~2`, and so on, to refer to them:
 
 
 ~~~
-$ git diff HEAD~2 guacamole.md
+$ git diff HEAD~2 goostats.sh
 ~~~
 {: .language-bash}
 
 ~~~
-diff --git a/guacamole.md b/guacamole.md
+diff --git a/goostats.sh b/goostats.sh
 index df0654a..b36abfd 100644
---- a/guacamole.md
-+++ b/guacamole.md
+--- a/goostats.sh
++++ b/goostats.sh
 @@ -1,2 +1,5 @@
  # Ingredients
 +- avocado
@@ -99,7 +99,7 @@ well as the commit message, rather than the _differences_ between a commit and o
 working directory that we see by using `git diff`.
 
 ~~~
-$ git show HEAD~2 guacamole.md
+$ git show HEAD~2 goostats.sh
 ~~~
 {: .language-bash}
 
@@ -110,11 +110,11 @@ Date:   Thu Aug 22 10:07:21 2013 -0400
 
     Create a template for recipe
 
-diff --git a/guacamole.md b/guacamole.md
+diff --git a/goostats.sh b/goostats.sh
 new file mode 100644
 index 0000000..df0654a
 --- /dev/null
-+++ b/guacamole.md
++++ b/goostats.sh
 @@ -0,0 +1,2 @@
 +# Ingredients
 +# Instructions
@@ -141,15 +141,15 @@ Our first commit was given the ID
 so let's try this:
 
 ~~~
-$ git diff f22b25e3233b4645dabd0d81e651fe074bd8e73b guacamole.md
+$ git diff f22b25e3233b4645dabd0d81e651fe074bd8e73b goostats.sh
 ~~~
 {: .language-bash}
 
 ~~~
-diff --git a/guacamole.md b/guacamole.md
+diff --git a/goostats.sh b/goostats.sh
 index df0654a..93a3e13 100644
---- a/guacamole.md
-+++ b/guacamole.md
+--- a/goostats.sh
++++ b/goostats.sh
 @@ -1,2 +1,5 @@
  # Ingredients
 +- avocado
@@ -165,15 +165,15 @@ but typing out random 40-character strings is annoying,
 so Git lets us use just the first few characters (typically seven for normal size projects):
 
 ~~~
-$ git diff f22b25e guacamole.md
+$ git diff f22b25e goostats.sh
 ~~~
 {: .language-bash}
 
 ~~~
-diff --git a/guacamole.md b/guacamole.md
+diff --git a/goostats.sh b/goostats.sh
 index df0654a..93a3e13 100644
---- a/guacamole.md
-+++ b/guacamole.md
+--- a/goostats.sh
++++ b/goostats.sh
 @@ -1,2 +1,5 @@
  # Ingredients
 +- avocado
@@ -188,7 +188,7 @@ All right! So
 we can save changes to files and see what we've changed. Now, how
 can we restore older versions of things?
 Let's suppose we change our mind about the last update to
-`guacamole.md` (the "ill-considered change").
+`goostats.sh` (the "ill-considered change").
 
 `git status` now tells us that the file has been changed,
 but those changes haven't been staged:
@@ -204,7 +204,7 @@ Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
-    modified:   guacamole.md
+    modified:   goostats.sh
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ~~~
@@ -214,8 +214,8 @@ We can put things back the way they were
 by using `git checkout`:
 
 ~~~
-$ git checkout HEAD guacamole.md
-$ cat guacamole.md
+$ git checkout HEAD goostats.sh
+$ cat goostats.sh
 ~~~
 {: .language-bash}
 
@@ -237,12 +237,12 @@ If we want to go back even further,
 we can use a commit identifier instead:
 
 ~~~
-$ git checkout f22b25e guacamole.md
+$ git checkout f22b25e goostats.sh
 ~~~
 {: .language-bash}
 
 ~~~
-$ cat guacamole.md
+$ cat goostats.sh
 ~~~
 {: .language-bash}
 
@@ -262,7 +262,7 @@ On branch main
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
 
-    modified:   guacamole.md
+    modified:   goostats.sh
 
 ~~~
 {: .output}
@@ -272,7 +272,7 @@ Again, we can put things back the way they were
 by using `git checkout`:
 
 ~~~
-$ git checkout HEAD guacamole.md
+$ git checkout HEAD goostats.sh
 ~~~
 {: .language-bash}
 
@@ -281,14 +281,14 @@ $ git checkout HEAD guacamole.md
 > Above we used
 >
 > ~~~
-> $ git checkout f22b25e guacamole.md
+> $ git checkout f22b25e goostats.sh
 > ~~~
 > {: .language-bash}
 >
-> to revert `guacamole.md` to its state after the commit `f22b25e`. But be careful!
+> to revert `goostats.sh` to its state after the commit `f22b25e`. But be careful!
 > The command `checkout` has other important functionalities and Git will misunderstand
 > your intentions if you are not accurate with the typing. For example,
-> if you forget `guacamole.md` in the previous command.
+> if you forget `goostats.sh` in the previous command.
 >
 > ~~~
 > $ git checkout f22b25e
@@ -494,10 +494,10 @@ moving backward and forward in time becomes much easier.
 
 > ## Checking Understanding of `git diff`
 >
-> Consider this command: `git diff HEAD~9 guacamole.md`. What do you predict this command
+> Consider this command: `git diff HEAD~9 goostats.sh`. What do you predict this command
 > will do if you execute it? What happens when you do execute it? Why?
 >
-> Try another command, `git diff [ID] guacamole.md`, where [ID] is replaced with
+> Try another command, `git diff [ID] goostats.sh`, where [ID] is replaced with
 > the unique identifier for your most recent commit. What do you think will happen,
 > and what does happen?
 {: .challenge}
@@ -506,7 +506,7 @@ moving backward and forward in time becomes much easier.
 >
 > `git checkout` can be used to restore a previous commit when unstaged changes have
 > been made, but will it also work for changes that have been staged but not committed?
-> Make a change to `guacamole.md`, add that change, and use `git checkout` to see if
+> Make a change to `goostats.sh`, add that change, and use `git checkout` to see if
 > you can remove your change.
 {: .challenge}
 
@@ -516,15 +516,15 @@ moving backward and forward in time becomes much easier.
 > the right commit ID, especially if the commit is from several months ago.
 >
 > Imagine the `north-pacific-gyre` project has more than 50 files.
-> You would like to find a commit that modifies some specific text in `guacamole.md`.
+> You would like to find a commit that modifies some specific text in `goostats.sh`.
 > When you type `git log`, a very long list appeared.
 > How can you narrow down the search?
 >
 > Recall that the `git diff` command allows us to explore one specific file,
-> e.g., `git diff guacamole.md`. We can apply a similar idea here.
+> e.g., `git diff goostats.sh`. We can apply a similar idea here.
 >
 > ~~~
-> $ git log guacamole.md
+> $ git log goostats.sh
 > ~~~
 > {: .language-bash}
 >
@@ -536,7 +536,7 @@ moving backward and forward in time becomes much easier.
 > Is it possible to combine both? Let's try the following:
 >
 > ~~~
-> $ git log --patch guacamole.md
+> $ git log --patch goostats.sh
 > ~~~
 > {: .language-bash}
 >

@@ -26,18 +26,17 @@ $ cd ~/Desktop/north-pacific-gyre
 ~~~
 {: .language-bash}
 
-Let's create a file called `guacamole.md` that contains the basic structure to
-have a recipe.
+Let's create a file called `goostats.sh` that contains the basic structure for Nelle's analysis code.
 We'll use `nano` to edit the file;
 you can use whatever editor you like.
 In particular, this does not have to be the `core.editor` you set globally earlier. But remember, the bash command to create or edit a new file will depend on the editor you choose (it might not be `nano`). For a refresher on text editors, check out ["Which Editor?"](https://swcarpentry.github.io/shell-novice/03-create/) in [The Unix Shell](https://swcarpentry.github.io/shell-novice/) lesson.
 
 ~~~
-$ nano guacamole.md
+$ nano goostats.sh
 ~~~
 {: .language-bash}
 
-Type the text below into the `guacamole.md` file:
+Type the text below into the `goostats.sh` file:
 
 ~~~
 # Ingredients
@@ -54,15 +53,15 @@ $ ls
 {: .language-bash}
 
 ~~~
-guacamole.md
+goostats.sh
 ~~~
 {: .output}
 
 
-`guacamole.md` contains a single line, which we can see by running:
+`goostats.sh` contains a single line, which we can see by running:
 
 ~~~
-$ cat guacamole.md
+$ cat goostats.sh
 ~~~
 {: .language-bash}
 
@@ -88,7 +87,7 @@ No commits yet
 Untracked files:
    (use "git add <file>..." to include in what will be committed)
 
-	guacamole.md
+	goostats.sh
 
 nothing added to commit but untracked files present (use "git add" to track)
 ~~~
@@ -99,7 +98,7 @@ that Git isn't keeping track of.
 We can tell Git to track a file using `git add`:
 
 ~~~
-$ git add guacamole.md
+$ git add goostats.sh
 ~~~
 {: .language-bash}
 
@@ -118,12 +117,12 @@ No commits yet
 Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
 
-	new file:   guacamole.md
+	new file:   goostats.sh
 
 ~~~
 {: .output}
 
-Git now knows that it's supposed to keep track of `guacamole.md`,
+Git now knows that it's supposed to keep track of `goostats.sh`,
 but it hasn't recorded these changes as a commit yet.
 To get it to do that,
 we need to run one more command:
@@ -136,7 +135,7 @@ $ git commit -m "Create a template for recipe"
 ~~~
 [main (root-commit) f22b25e] Create a template for recipe
  1 file changed, 1 insertion(+)
- create mode 100644 guacamole.md
+ create mode 100644 goostats.sh
 ~~~
 {: .output}
 
@@ -198,7 +197,7 @@ and the log message Git was given when the commit was created.
 
 > ## Where Are My Changes?
 >
-> If we run `ls` at this point, we will still see just one file called `guacamole.md`.
+> If we run `ls` at this point, we will still see just one file called `goostats.sh`.
 > That's because Git saves information about files' history
 > in the special `.git` directory mentioned earlier
 > so that our filesystem doesn't become cluttered
@@ -210,8 +209,8 @@ Now suppose Nelle adds more information to the file.
 you may use a different editor, and don't need to `cat`.)
 
 ~~~
-$ nano guacamole.md
-$ cat guacamole.md
+$ nano goostats.sh
+$ cat goostats.sh
 ~~~
 {: .language-bash}
 
@@ -238,7 +237,7 @@ Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
-	modified:   guacamole.md
+	modified:   goostats.sh
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ~~~
@@ -261,10 +260,10 @@ $ git diff
 {: .language-bash}
 
 ~~~
-diff --git a/guacamole.md b/guacamole.md
+diff --git a/goostats.sh b/goostats.sh
 index df0654a..315bf3a 100644
---- a/guacamole.md
-+++ b/guacamole.md
+--- a/goostats.sh
++++ b/goostats.sh
 @@ -1,2 +1,5 @@
  # Ingredients
 +- avocado
@@ -304,7 +303,7 @@ Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
-	modified:   guacamole.md
+	modified:   goostats.sh
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ~~~
@@ -315,7 +314,7 @@ Git won't commit because we didn't use `git add` first.
 Let's fix that:
 
 ~~~
-$ git add guacamole.md
+$ git add goostats.sh
 $ git commit -m "Add basic guacamole's ingredients"
 ~~~
 {: .language-bash}
@@ -372,8 +371,8 @@ First,
 we'll add another line to the file:
 
 ~~~
-$ nano guacamole.md
-$ cat guacamole.md
+$ nano goostats.sh
+$ cat goostats.sh
 ~~~
 {: .language-bash}
 
@@ -392,10 +391,10 @@ $ git diff
 {: .language-bash}
 
 ~~~
-diff --git a/guacamole.md b/guacamole.md
+diff --git a/goostats.sh b/goostats.sh
 index 315bf3a..b36abfd 100644
---- a/guacamole.md
-+++ b/guacamole.md
+--- a/goostats.sh
++++ b/goostats.sh
 @@ -1,5 +1,5 @@
  # Ingredients
  - avocado
@@ -413,7 +412,7 @@ Now let's put that change in the staging area
 and see what `git diff` reports:
 
 ~~~
-$ git add guacamole.md
+$ git add goostats.sh
 $ git diff
 ~~~
 {: .language-bash}
@@ -431,10 +430,10 @@ $ git diff --staged
 {: .language-bash}
 
 ~~~
-diff --git a/guacamole.md b/guacamole.md
+diff --git a/goostats.sh b/goostats.sh
 index 315bf3a..b36abfd 100644
---- a/guacamole.md
-+++ b/guacamole.md
+--- a/goostats.sh
++++ b/goostats.sh
 @@ -1,5 +1,5 @@
  # Ingredients
  - avocado
@@ -637,7 +636,7 @@ repository (`git commit`):
 > ## Choosing a Commit Message
 >
 > Which of the following commit messages would be most appropriate for the
-> last commit made to `guacamole.md`?
+> last commit made to `goostats.sh`?
 >
 > 1. "Changes"
 > 2. "Changed lemon for lime"
@@ -688,7 +687,7 @@ repository (`git commit`):
 > The staging area can hold changes from any number of files
 > that you want to commit as a single snapshot.
 >
-> 1. Add some text to `guacamole.md` noting the rough price of the
+> 1. Add some text to `goostats.sh` noting the rough price of the
 > ingredients.
 > 2. Create a new file `groceries.md` with a list of products and
 > their prices for different markets.
@@ -697,10 +696,10 @@ repository (`git commit`):
 >
 > > ## Solution
 > >
-> > First we make our changes to the `guacamole.md` and `groceries.md` files:
+> > First we make our changes to the `goostats.sh` and `groceries.md` files:
 > > ~~~
-> > $ nano guacamole.md
-> > $ cat guacamole.md
+> > $ nano goostats.sh
+> > $ cat goostats.sh
 > > ~~~
 > > {: .language-bash}
 > > ~~~
@@ -725,12 +724,12 @@ repository (`git commit`):
 > > Now you can add both files to the staging area. We can do that in one line:
 > >
 > > ~~~
-> > $ git add guacamole.md groceries.md
+> > $ git add goostats.sh groceries.md
 > > ~~~
 > > {: .language-bash}
 > > Or with multiple commands:
 > > ~~~
-> > $ git add guacamole.md
+> > $ git add goostats.sh
 > > $ git add groceries.md
 > > ~~~
 > > {: .language-bash}

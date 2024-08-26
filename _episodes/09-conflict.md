@@ -20,11 +20,11 @@ different changes to each copy.  Version control helps us manage these
 [resolve]({{ page.root }}{% link reference.md %}#resolve) overlapping changes.
 
 To see how we can resolve conflicts, we must first create one.  The file
-`guacamole.md` currently looks like this in both partners' copies of our `north-pacific-gyre`
+`goostats.sh` currently looks like this in both partners' copies of our `north-pacific-gyre`
 repository:
 
 ~~~
-$ cat guacamole.md
+$ cat goostats.sh
 ~~~
 {: .language-bash}
 
@@ -40,8 +40,8 @@ $ cat guacamole.md
 Let's add a line to the collaborator's copy only:
 
 ~~~
-$ nano guacamole.md
-$ cat guacamole.md
+$ nano goostats.sh
+$ cat goostats.sh
 ~~~
 {: .language-bash}
 
@@ -58,7 +58,7 @@ $ cat guacamole.md
 and then push the change to GitHub:
 
 ~~~
-$ git add guacamole.md
+$ git add goostats.sh
 $ git commit -m "First step on the instructions"
 ~~~
 {: .language-bash}
@@ -92,8 +92,8 @@ make a different change to their copy
 *without* updating from GitHub:
 
 ~~~
-$ nano guacamole.md
-$ cat guacamole.md
+$ nano goostats.sh
+$ cat goostats.sh
 ~~~
 {: .language-bash}
 
@@ -110,7 +110,7 @@ $ cat guacamole.md
 We can commit the change locally:
 
 ~~~
-$ git add guacamole.md
+$ git add goostats.sh
 $ git commit -m "Add first step"
 ~~~
 {: .language-bash}
@@ -162,8 +162,8 @@ Unpacking objects: 100% (3/3), done.
 From https://github.com/nelle/north-pacific-gyre
  * branch            main     -> FETCH_HEAD
     29aba7c..dabb4c8  main     -> origin/main
-Auto-merging guacamole.md
-CONFLICT (content): Merge conflict in guacamole.md
+Auto-merging goostats.sh
+CONFLICT (content): Merge conflict in goostats.sh
 Automatic merge failed; fix conflicts and then commit the result.
 ~~~
 {: .output}
@@ -176,7 +176,7 @@ stop us from trampling on our previous work. The conflict is marked in
 in the affected file:
 
 ~~~
-$ cat guacamole.md
+$ cat goostats.sh
 ~~~
 {: .language-bash}
 
@@ -208,7 +208,7 @@ or get rid of the change entirely.
 Let's replace both so that the file looks like this:
 
 ~~~
-$ cat guacamole.md
+$ cat goostats.sh
 ~~~
 {: .language-bash}
 
@@ -223,11 +223,11 @@ $ cat guacamole.md
 {: .output}
 
 To finish merging,
-we add `guacamole.md` to the changes being made by the merge
+we add `goostats.sh` to the changes being made by the merge
 and then commit:
 
 ~~~
-$ git add guacamole.md
+$ git add goostats.sh
 $ git status
 ~~~
 {: .language-bash}
@@ -239,7 +239,7 @@ All conflicts fixed but you are still merging.
 
 Changes to be committed:
 
-	modified:   guacamole.md
+	modified:   goostats.sh
 
 ~~~
 {: .output}
@@ -294,7 +294,7 @@ From https://github.com/nelle/north-pacific-gyre
     dabb4c8..2abf2b1  main     -> origin/main
 Updating dabb4c8..2abf2b1
 Fast-forward
- guacamole.md | 2 +-
+ goostats.sh | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 ~~~
 {: .output}
@@ -302,7 +302,7 @@ Fast-forward
 We get the merged file:
 
 ~~~
-$ cat guacamole.md
+$ cat goostats.sh
 ~~~
 {: .language-bash}
 
@@ -438,7 +438,7 @@ Conflicts can also be minimized with project management strategies:
 > > ~~~
 > > {: .output}
 > >
-> > The conflict message here is mostly the same as it was for `guacamole.md`, but
+> > The conflict message here is mostly the same as it was for `goostats.sh`, but
 > > there is one key additional line:
 > >
 > > ~~~
