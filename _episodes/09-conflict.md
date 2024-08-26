@@ -20,7 +20,7 @@ different changes to each copy.  Version control helps us manage these
 [resolve]({{ page.root }}{% link reference.md %}#resolve) overlapping changes.
 
 To see how we can resolve conflicts, we must first create one.  The file
-`guacamole.md` currently looks like this in both partners' copies of our `recipes`
+`guacamole.md` currently looks like this in both partners' copies of our `north-pacific-gyre`
 repository:
 
 ~~~
@@ -82,7 +82,7 @@ Compressing objects: 100% (3/3), done.
 Writing objects: 100% (3/3), 331 bytes | 331.00 KiB/s, done.
 Total 3 (delta 2), reused 0 (delta 0)
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
-To https://github.com/alflin/recipes.git
+To https://github.com/nelle/north-pacific-gyre.git
    29aba7c..dabb4c8  main -> main
 ~~~
 {: .output}
@@ -129,9 +129,9 @@ $ git push origin main
 {: .language-bash}
 
 ~~~
-To https://github.com/alflin/recipes.git
+To https://github.com/nelle/north-pacific-gyre.git
  ! [rejected]        main -> main (fetch first)
-error: failed to push some refs to 'https://github.com/alflin/recipes.git'
+error: failed to push some refs to 'https://github.com/nelle/north-pacific-gyre.git'
 hint: Updates were rejected because the remote contains work that you do
 hint: not have locally. This is usually caused by another repository pushing
 hint: to the same ref. You may want to first integrate the remote changes
@@ -159,7 +159,7 @@ remote: Counting objects: 100% (5/5), done.
 remote: Compressing objects: 100% (1/1), done.
 remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0
 Unpacking objects: 100% (3/3), done.
-From https://github.com/alflin/recipes
+From https://github.com/nelle/north-pacific-gyre
  * branch            main     -> FETCH_HEAD
     29aba7c..dabb4c8  main     -> origin/main
 Auto-merging guacamole.md
@@ -269,7 +269,7 @@ Compressing objects: 100% (6/6), done.
 Writing objects: 100% (6/6), 645 bytes | 645.00 KiB/s, done.
 Total 6 (delta 4), reused 0 (delta 0)
 remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
-To https://github.com/alflin/recipes.git
+To https://github.com/nelle/north-pacific-gyre.git
    dabb4c8..2abf2b1  main -> main
 ~~~
 {: .output}
@@ -289,7 +289,7 @@ remote: Counting objects: 100% (10/10), done.
 remote: Compressing objects: 100% (2/2), done.
 remote: Total 6 (delta 4), reused 6 (delta 4), pack-reused 0
 Unpacking objects: 100% (6/6), done.
-From https://github.com/alflin/recipes
+From https://github.com/nelle/north-pacific-gyre
  * branch            main     -> FETCH_HEAD
     dabb4c8..2abf2b1  main     -> origin/main
 Updating dabb4c8..2abf2b1
@@ -356,7 +356,7 @@ Conflicts can also be minimized with project management strategies:
 >
 > > ## Solution
 > >
-> > Let's try it. Suppose Alfredo takes a picture of its guacamole and
+> > Let's try it. Suppose Nelle takes a picture of its guacamole and
 > > calls it `guacamole.jpg`.
 > >
 > > If you do not have an image file of guacamole available, you can create
@@ -369,14 +369,14 @@ Conflicts can also be minimized with project management strategies:
 > > {: .language-bash}
 > >
 > > ~~~
-> > -rw-r--r-- 1 alflin 57095 1.0K Mar  8 20:24 guacamole.jpg
+> > -rw-r--r-- 1 nelle 57095 1.0K Mar  8 20:24 guacamole.jpg
 > > ~~~
 > > {: .output}
 > >
 > > `ls` shows us that this created a 1-kilobyte file. It is full of
 > > random bytes read from the special file, `/dev/urandom`.
 > >
-> > Now, suppose Alfredo adds `guacamole.jpg` to his repository:
+> > Now, suppose Nelle adds `guacamole.jpg` to her repository:
 > >
 > > ~~~
 > > $ git add guacamole.jpg
@@ -392,8 +392,8 @@ Conflicts can also be minimized with project management strategies:
 > > {: .output}
 > >
 > > Suppose that Jimmy has added a similar picture in the meantime.
-> > His is a picture of a guacamole with nachos, but it is *also* called `guacamole.jpg`.
-> > When Alfredo tries to push, he gets a familiar message:
+> > Hers is a picture of a guacamole with nachos, but it is *also* called `guacamole.jpg`.
+> > When Nelle tries to push, she gets a familiar message:
 > >
 > > ~~~
 > > $ git push origin main
@@ -401,9 +401,9 @@ Conflicts can also be minimized with project management strategies:
 > > {: .language-bash}
 > >
 > > ~~~
-> > To https://github.com/alflin/recipes.git
+> > To https://github.com/nelle/north-pacific-gyre.git
 > >  ! [rejected]        main -> main (fetch first)
-> > error: failed to push some refs to 'https://github.com/alflin/recipes.git'
+> > error: failed to push some refs to 'https://github.com/nelle/north-pacific-gyre.git'
 > > hint: Updates were rejected because the remote contains work that you do
 > > hint: not have locally. This is usually caused by another repository pushing
 > > hint: to the same ref. You may want to first integrate the remote changes
@@ -428,7 +428,7 @@ Conflicts can also be minimized with project management strategies:
 > > remote: Compressing objects: 100% (3/3), done.
 > > remote: Total 3 (delta 0), reused 0 (delta 0)
 > > Unpacking objects: 100% (3/3), done.
-> > From https://github.com/alflin/recipes.git
+> > From https://github.com/nelle/north-pacific-gyre.git
 > >  * branch            main     -> FETCH_HEAD
 > >    6a67967..439dc8c  main     -> origin/main
 > > warning: Cannot merge binary files: guacamole.jpg (HEAD vs. 439dc8c08869c342438f6dc4a2b615b05b93c76e)

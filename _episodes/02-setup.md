@@ -107,7 +107,7 @@ your changes, press <kbd>Esc</kbd> then type `:q!` and hit <kbd>Return</kbd>.
 
 Git (2.28+) allows configuration of the name of the branch created when you
 initialize any new repository.  Nelle decides to use that feature to set it to `main` so 
-it matches the cloud service he will eventually use. 
+it matches the cloud service she will eventually use. 
 
 ~~~
 $ git config --global init.defaultBranch main

@@ -105,7 +105,7 @@ $ git show HEAD~2 guacamole.md
 
 ~~~
 commit f22b25e3233b4645dabd0d81e651fe074bd8e73b
-Author: Alfredo Linguini <a.linguini@ratatouille.fr>
+Author: Nelle <nelle@numa.org>
 Date:   Thu Aug 22 10:07:21 2013 -0400
 
     Create a template for recipe
@@ -440,7 +440,7 @@ moving backward and forward in time becomes much easier.
 > What is the output of the last command in
 >
 > ~~~
-> $ cd recipes
+> $ cd north-pacific-gyre
 > $ echo "I like tomatos, therefore I like ketchup" > ketchup.md
 > $ git add ketchup.md
 > $ echo "ketchup enchances pasta dishes" > ketchup.md
@@ -515,7 +515,7 @@ moving backward and forward in time becomes much easier.
 > Exploring history is an important part of Git, and often it is a challenge to find
 > the right commit ID, especially if the commit is from several months ago.
 >
-> Imagine the `recipes` project has more than 50 files.
+> Imagine the `north-pacific-gyre` project has more than 50 files.
 > You would like to find a commit that modifies some specific text in `guacamole.md`.
 > When you type `git log`, a very long list appeared.
 > How can you narrow down the search?

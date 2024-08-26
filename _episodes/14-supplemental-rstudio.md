@@ -25,7 +25,7 @@ project with Git. To get started using Git in RStudio, we create a new project:
 ![RStudio screenshot showing the file menu dropdown with "New Project..." selected](../fig/RStudio_screenshot_newproject.png)
 
 This will open a dialog asking us how we want to create the project. We have
-some options here. Let's say that we want to use RStudio with the recipes
+some options here. Let's say that we want to use RStudio with the north-pacific-gyre
 repository that we already made. Since that repository lives in a directory on
 our computer, we choose the option "Existing Directory":
 
@@ -71,7 +71,7 @@ Next, RStudio will ask which existing directory we want to use. Click
 
 ![](../fig/RStudio_screenshot_navigateexisting.png)
 
-Ta-da! We have created a new project in RStudio within the existing recipes
+Ta-da! We have created a new project in RStudio within the existing north-pacific-gyre
 repository. Notice the vertical "Git" menu in the menu bar. RStudio has
 recognized that the current directory is a Git repository, and gives us a
 number of tools to use Git:
