@@ -17,9 +17,7 @@ to keep track of what one person did and when.
 Even if you aren't collaborating with other people,
 automated version control is much better than this situation:
 
-[![Piled Higher and Deeper by Jorge Cham, http://www.phdcomics.com/comics/archive_print.php?comicid=1531]({{ page.root }}/fig/phd101212s.png)](http://www.phdcomics.com)
-
-"Piled Higher and Deeper" by Jorge Cham, http://www.phdcomics.com
+[![Piled Higher and Deeper by Jorge Cham, https://phdcomics.com/comics.php?f=1323]({{ page.root }}/fig/phd052810s.gif)](https://phdcomics.com/comics.php?f=1323)
 
 We've all been in this situation before: it seems ridiculous to have
 multiple nearly-identical versions of the same document. Some word
@@ -28,6 +26,10 @@ Word's
 [Track Changes](https://support.office.com/en-us/article/Track-changes-in-Word-197ba630-0f5f-4a8e-9a77-3712475e806a), 
 Google Docs' [version history](https://support.google.com/docs/answer/190843?hl=en), or 
 LibreOffice's [Recording and Displaying Changes](https://help.libreoffice.org/Common/Recording_and_Displaying_Changes).
+
+Given that nearly all code is written/stored as plain text, this kind of versioning isn't available out of the box.
+As with the example above, most code is not contained within a single file and there is therefore a need to have a version control that will act across multiple files at once.
+That is, there is a need for a **project level** version control.
 
 Version control systems start with a base version of the document and
 then record changes you make each step of the way. You can
@@ -85,9 +87,7 @@ collaboration among different people.
 > > ## Solution
 > >
 > > *   Recovering the excellent version is only possible if you created a copy
-> >     of the old version of the paper. The danger of losing good versions
-> >     often leads to the problematic workflow illustrated in the PhD Comics
-> >     cartoon at the top of this page.
+> >     of the old version of the paper.
 > >     
 > > *   Collaborative writing with traditional word processors is cumbersome.
 > >     Either every collaborator has to work on a document sequentially
