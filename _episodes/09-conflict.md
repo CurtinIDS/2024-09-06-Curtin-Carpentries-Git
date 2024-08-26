@@ -27,7 +27,7 @@ different changes to each copy.  Version control helps us manage these
 [resolve]({{ page.root }}{% link reference.md %}#resolve) overlapping changes.
 
 To see how we can resolve conflicts, we must first create one.  The file
-`goostats.sh` currently looks like this in both partners' copies of our `north-pacific-gyre`
+`goostats.sh` currently looks like this in both copies of our `north-pacific-gyre`
 repository:
 
 ~~~
