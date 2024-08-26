@@ -21,15 +21,15 @@ of configurations we will set as we get started with Git:
 
 On a command line, Git commands are written as `git verb options`,
 where `verb` is what we actually want to do and `options` is additional optional information which may be needed for the `verb`. So here is how
-Alfredo sets up his new laptop:
+Nelle sets up her new laptop:
 
 ~~~
-$ git config --global user.name "Alfredo Linguini"
-$ git config --global user.email "a.linguini@ratatouille.fr"
+$ git config --global user.name "Nelle"
+$ git config --global user.email "nelle@numa.org"
 ~~~
 {: .language-bash}
 
-Please use your own name and email address instead of Alfredo's. This user name and email will be associated with your subsequent Git activity,
+Please use your own name and email address instead of Nelle's. This user name and email will be associated with your subsequent Git activity,
 which means that any changes pushed to
 [GitHub](https://github.com/),
 [BitBucket](https://bitbucket.org/),
@@ -76,7 +76,7 @@ For this lesson, we will be interacting with [GitHub](https://github.com/) and s
 > 
 {: .callout}
 
-Alfredo also has to set his favorite text editor, following this table:
+Nelle also has to set her favorite text editor, following this table:
 
 | Editor             | Configuration command                            |
 |:-------------------|:-------------------------------------------------|
@@ -106,7 +106,7 @@ your changes, press <kbd>Esc</kbd> then type `:q!` and hit <kbd>Return</kbd>.
 {: .callout}
 
 Git (2.28+) allows configuration of the name of the branch created when you
-initialize any new repository.  Alfredo decides to use that feature to set it to `main` so 
+initialize any new repository.  Nelle decides to use that feature to set it to `main` so 
 it matches the cloud service he will eventually use. 
 
 ~~~
