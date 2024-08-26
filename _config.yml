@@ -166,6 +166,6 @@ episode_order:
   - 05-history
   - 06-ignore
   - 07-github
-  - 08-collab
   - 09-conflict
+  - 10-branching
   - 15-supplemental-vscode
