@@ -96,8 +96,7 @@ the current status of each file. Clicking on a file shows information about
 changes in the lower panel (using output of `git diff`). Once everything is the
 way we want it, we click "Commit":
 
-TODO: mising link
-![]({{page.root}}{% link fig/RStudio_screenshot_review.png %})
+TODO: mising link to fig/RStudio_screenshot_review.png
 
 The changes can be pushed by selecting "Push Branch" from the Git menu. There
 are also options to pull from the remote repository, and to view the commit
