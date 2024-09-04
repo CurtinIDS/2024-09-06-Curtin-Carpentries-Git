@@ -379,7 +379,7 @@ home directory, which we assume is the current working directory of your bash sh
 
 Your output should be a list of all the files and sub-directories in your
 Desktop directory, including the `shell-lesson-data` directory you downloaded at
-the [setup for this lesson](../learners/setup.md). (On most systems, the
+the [setup for this lesson]({{page.root}}{%link _episodes/02-setup.md%}). (On most systems, the
 contents of the `Desktop` directory in the shell will show up as icons in a graphical
 user interface behind all the open windows. See if this is the case for you.)
 

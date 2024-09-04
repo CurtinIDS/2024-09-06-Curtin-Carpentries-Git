@@ -118,7 +118,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ~~~
 {: .output}
 
-![The Conflicting Changes](../fig/conflict.svg)
+![The Conflicting Changes]({{page.root}}{% link fig/conflict.svg %})
 
 Git rejects the push because it detects that the remote repository has new updates that have not been
 incorporated into the local branch.

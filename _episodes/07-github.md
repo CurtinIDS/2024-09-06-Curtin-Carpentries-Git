@@ -29,7 +29,7 @@ Let's start by sharing the changes we've made to our current project with the
 world.  Log in to GitHub, then click on the icon in the top right corner to
 create a new repository called `north-pacific-gyre`:
 
-![Creating a Repository on GitHub (Step 1)](../fig/github-create-repo-01.png)
+![Creating a Repository on GitHub (Step 1)]({{page.root}}{% link fig/github-create-repo-01.png %})
 
 Name your repository "north-pacific-gyre" and then click "Create Repository".
 
@@ -38,12 +38,12 @@ Note: Since this repository will be connected to a local repository, it needs to
 .gitignore" and "Add a license." See the "GitHub License and README files" exercise below for a full 
 explanation of why the repository needs to be empty.
 
-![Creating a Repository on GitHub (Step 2)](../fig/github-create-repo-02.png)
+![Creating a Repository on GitHub (Step 2)]({{page.root}}{% link fig/github-create-repo-02.png %})
 
 As soon as the repository is created, GitHub displays a page with a URL and some
 information on how to configure your local repository:
 
-![Creating a Repository on GitHub (Step 3)](../fig/github-create-repo-03.png)
+![Creating a Repository on GitHub (Step 3)]({{page.root}}{% link fig/github-create-repo-03.png %})
 
 This effectively does the following on GitHub's servers:
 
@@ -54,15 +54,15 @@ $ git init
 ~~~
 {: .language-bash}
 
-If you remember back to the earlier [episode](../04-changes/) where we added and
+If you remember back to the earlier [episode]({{page.root}}{% link _episodes/04-changes.md %}) where we added and
 committed our earlier work on `goostats.sh`, we had a diagram of the local repository
 which looked like this:
 
-![The Local Repository with Git Staging Area](../fig/git-staging-area.svg)
+![The Local Repository with Git Staging Area]({{page.root}}{% link fig/git-staging-area.svg %})
 
 Now that we have two repositories, we need a diagram like this:
 
-![Freshly-Made GitHub Repository](../fig/git-freshly-made-github-repo.png)
+![Freshly-Made GitHub Repository]({{page.root}}{% link fig/git-freshly-made-github-repo.png %})
 
 Note that our local repository still contains our earlier work on `goostats.sh`, but the
 remote repository on GitHub appears empty as it doesn't contain any files yet.
@@ -72,7 +72,7 @@ GitHub repository a [remote]({{ page.root}}{% link reference.md %}#remote) for t
 The home page of the repository on GitHub includes the string we need to
 identify it:
 
-![Where to Find Repository URL on GitHub](../fig/github-find-repo-string.png)
+![Where to Find Repository URL on GitHub]({{page.root}}{% link fig/github-find-repo-string.png %})
 
 Click on the 'SSH' link to change the [protocol]({{ page.root }}{% link reference.md %}#protocol) from HTTPS to SSH.
 
@@ -84,7 +84,7 @@ Click on the 'SSH' link to change the [protocol]({{ page.root }}{% link referenc
 > and concepts of SSH and key pairs, and other material supplemental to git related SSH. 
 {: .callout}
 
-![Changing the Repository URL on GitHub](../fig/github-change-repo-string.png)
+![Changing the Repository URL on GitHub]({{page.root}}{% link fig/github-change-repo-string.png %})
 
 Copy that URL from the browser, go into the local `north-pacific-gyre` repository, and run
 this command:
@@ -351,7 +351,7 @@ To https://github.com/nelle/north-pacific-gyre.git
 
 Our local and remote repositories are now in this state:
 
-![GitHub Repository After First Push](../fig/github-repo-after-first-push.png)
+![GitHub Repository After First Push]({{page.root}}{% link  fig/github-repo-after-first-push.png %})
 
 > ## The '-u' Flag
 >

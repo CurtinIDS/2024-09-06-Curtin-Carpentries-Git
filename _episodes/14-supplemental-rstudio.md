@@ -22,14 +22,14 @@ development of the project over time, to be able to revert to previous
 versions, and to collaborate with others, we version control the Rstudio
 project with Git. To get started using Git in RStudio, we create a new project:
 
-![RStudio screenshot showing the file menu dropdown with "New Project..." selected](../fig/RStudio_screenshot_newproject.png)
+![RStudio screenshot showing the file menu dropdown with "New Project..." selected]({{page.root}}{% link fig/RStudio_screenshot_newproject.png%})
 
 This will open a dialog asking us how we want to create the project. We have
 some options here. Let's say that we want to use RStudio with the north-pacific-gyre
 repository that we already made. Since that repository lives in a directory on
 our computer, we choose the option "Existing Directory":
 
-![RStudio screenshot showing New Project dialog window with "Create project from existing directory" selected](../fig/RStudio_screenshot_existingdirectory.png)
+![RStudio screenshot showing New Project dialog window with "Create project from existing directory" selected]({{page.root}}{% link fig/RStudio_screenshot_existingdirectory.png %})
 
 > ## Do You See a "Version Control" Option?
 >
@@ -76,18 +76,18 @@ repository. Notice the vertical "Git" menu in the menu bar. RStudio has
 recognized that the current directory is a Git repository, and gives us a
 number of tools to use Git:
 
-![RStudio window after new project is created with large arrow pointing to vertical Git menu bar.](../fig/RStudio_screenshot_afterclone.png)
+![RStudio window after new project is created with large arrow pointing to vertical Git menu bar.]({{page.root}}{% link fig/RStudio_screenshot_afterclone.png %})
 
 To edit the existing files in the repository, we can click on them in the
 "Files" panel on the lower right. Now let's add some additional information
 about Hummus:
 
-![](../fig/RStudio_screenshot_editfiles.png)
+![]({{page.root}}{% link fig/RStudio_screenshot_editfiles.png%})
 
 Once we have saved our edited files, we can use RStudio to commit the changes
 by clicking on "Commit..." in the Git menu:
 
-![RStudio screenshot showing the Git menu dropdown with "Commit..." selected](../fig/RStudio_screenshot_commit.png)
+![RStudio screenshot showing the Git menu dropdown with "Commit..." selected]({{page.root}}{% link fig/RStudio_screenshot_commit.png %})
 
 This will open a dialogue where we can select which files to commit (by
 checking the appropriate boxes in the "Staged" column), and enter a commit
@@ -96,13 +96,14 @@ the current status of each file. Clicking on a file shows information about
 changes in the lower panel (using output of `git diff`). Once everything is the
 way we want it, we click "Commit":
 
-![](../fig/RStudio_screenshot_review.png)
+TODO: mising link
+![]({{page.root}}{% link fig/RStudio_screenshot_review.png %})
 
 The changes can be pushed by selecting "Push Branch" from the Git menu. There
 are also options to pull from the remote repository, and to view the commit
 history:
 
-![RStudio screenshot showing the git menu dropdown with "History" selected](../fig/RStudio_screenshot_history.png)
+![RStudio screenshot showing the git menu dropdown with "History" selected]({{page.root}}{% link fig/RStudio_screenshot_history.png %})
 
 > ## Are the Push/Pull Commands Grayed Out?
 >
@@ -115,13 +116,13 @@ history:
 If we click on "History", we can see a graphical version of what `git log`
 would tell us:
 
-![](../fig/RStudio_screenshot_viewhistory.png)
+![]({{page.root}}{% link fig/RStudio_screenshot_viewhistory.png %})
 
 RStudio creates a number of files that it uses to keep track of a project. We
 often don't want to track these, in which case we add them to our `.gitignore`
 file:
 
-![RStudio screenshot showing .gitignore open in the editor pane with the files .Rproj.user, .Rhistory, .RData, and \*.Rproj added to the end](../fig/RStudio_screenshot_gitignore.png)
+![RStudio screenshot showing .gitignore open in the editor pane with the files .Rproj.user, .Rhistory, .RData, and \*.Rproj added to the end]({{page.root}}{% link fig/RStudio_screenshot_gitignore.png %})
 
 > ## Tip: versioning disposable output
 >
