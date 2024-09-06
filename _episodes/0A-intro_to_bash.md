@@ -179,7 +179,7 @@ In order to achieve her task, Nelle needs to know how to:
 
 The following files are useful, but not essential to follow the next few lessons.
 
-1. Download [shell-lesson-data.zip]({{page.roog}}{% link files/shell-lesson-data.zip %}) and move the file to your Desktop.
+1. Download [shell-lesson-data.zip]({{page.root}}{% link files/shell-lesson-data.zip %}) and move the file to your Desktop.
 2. Unzip/extract the file.
   **Let your instructor know if you need help with this step**.
   You should end up with a new folder called **`shell-lesson-data`** on your Desktop.
